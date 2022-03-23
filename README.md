@@ -1,2 +1,33 @@
-# Chat_Django
-Simple chat made using Django and Django Channels
+# Chat Django
+Simple chat made using Django and Django Channels.
+
+## Description
+
+This is a synchronous app with some asychronous code. It has two routes:
+
+```
+/chat/
+/chat/<str:room_name>/
+```
+
+First route directs to page with single input field. You write there name of a chat, you want to connect to.
+
+Second route directs to chat room you've entered earlier. Also it creates a websocket for asynchronous work.
+
+If you enter message and send it to server it will be shown in all windows with same page opened simultaneously.
+
+## Installation
+
+1. Copy a repository on your computer.
+2. Create a virtual environment with `python -m venv venv`.
+3. Activate it using `./venv/Scripts/activate`.
+4. Install requirements with `pip install -r requirements.txt`.
+5. In `settings.py` find `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD`. Then change their values to your email account and email/application password.
+6. Change your directory to `email_sender` using `cd email_sender`.
+7. Launch application with `python manage.py runserver` and follow the link `http://127.0.0.1:8000`.
+
+## Technology stack
+
+1. Python 3.9.4
+2. Django 4.0.3
+3. Django-Channels 3.0.4
